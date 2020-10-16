@@ -1,0 +1,138 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+    /* dark shades of primary color*/
+    --clr-primary-1: #2A018E;
+    /* grey used for paragraphs */
+    --clr-white: #fff;
+    --clr-black: #222;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+  }
+
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-secondary);
+  background: var(--clr-white);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.img{
+    width: 80%;
+}
+
+
+.main {
+    min-height: 100vh;
+}
+
+.first-side, .second-side{
+    display: grid;
+    place-items: center;
+}
+.second-side{
+    background-color: var(--clr-primary-1);
+    background-image: url("./SVG/big\ ring.svg"), url("./SVG/small\ ring.svg");
+    background-position: 0px 670px, 650px -120px;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: 970px 610px, 500px 500px;
+    box-shadow: var(--dark-shadow);
+}
+label{
+    color: var(--clr-white);
+    font-size: 1.5rem;
+    text-align: left;
+}
+.form{
+    width: 65%;
+}
+.form-control{
+    border-radius: 15px;
+    padding: 26px;
+}
+.btn-gradient{
+    color: var(--clr-white);
+    font-size: 2rem;
+    font-weight: 600;
+    background: linear-gradient(120deg, rgba(245, 198, 7, .9), rgba(128, 127, 0) 70%);
+    border-radius: 26px;
+    box-shadow: var(--dark-shadow);
+    width: 50%;
+    transition: var(--transition);
+}
+.btn-gradient:hover{
+    color: var(--clr-primary-1);
+    background: var(--clr-white);
+    transform: translateY(-10px);
+}
+
+/* The animation code */
+@keyframes example {
+    0%   {background-color: #807F00;}
+    50%  {background-color: var(--clr-primary-1);}
+    100% {background-color: darkred;}
+  }
+  
+  /* The element to apply the animation to */
+.second-side {
+    animation: example 10s linear 5s infinite alternate none;
+}
+
+
+/*
+==============
+Media Queries
+==============
+*/
+
+@media screen and (max-width: 400px){
+    .btn-gradient{
+        width: 100%;
+        border-radius: 20px;
+    }
+    label{
+        font-size: 1rem;
+    }
+    .voters-header{
+        font-size: 3rem;
+    }
+    .second-side{
+        background-image: url('./SVG/small\ ring.svg');
+        background-position: 250px 200px;
+        background-repeat: no-repeat;
+        background-origin: border-box;
+        background-size: 500px 500px;
+    }
+}
