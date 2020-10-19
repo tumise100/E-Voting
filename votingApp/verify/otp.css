@@ -1,0 +1,134 @@
+body {
+	background-image: url("svg/bg.svg");
+	background-position: center;
+	background-size: 55%;
+	background-repeat: no-repeat;
+}
+
+.logo {
+	width: 20%;
+	height: 20%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.innerBg {
+	height: 30.0625rem;
+	width: 22.5rem;
+	border-radius: 5px;
+	background: #fff;
+	color: #000;
+	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+	text-align: center;
+	margin-top: 30px;
+	margin-left: 500px;
+	
+}
+
+.image2 {
+	height: 105px;
+	width: 105px;
+	margin-top: 50px;
+	border-radius: 100px;
+}
+
+#fullName {
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+#matricNo {
+	font-size: 16px;
+	font-weight: 400;
+	margin-top: -15px;
+}
+
+#department {
+	font-size: 16px;
+	font-weight: 400;
+	margin-top: -15px;
+}
+
+hr {
+	opacity: 50%;
+}
+
+#otpText {
+	font-size: 11px;
+}
+#otpPhone {
+	font-size: 14px;
+	margin-top: 30px;
+	color: #707070;
+	opacity: 70%;
+}
+
+.inputOtp {
+	width: 199px;
+	height: 30px;
+	background-color: #fff;
+	border: none;
+	border-radius: 40px;
+	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+	opacity: 70%;
+
+}
+
+.otpButton {
+	height: 40px;
+	width: 150px;
+	border-radius: 300px;
+	background: linear-gradient(63deg, rgba(126,126,0,1) 0%, rgba(245,197,7,1) 100%);
+	border: none;
+	font-size: 16px;
+	font-weight: bold;
+	color: #1F0265;
+	box-shadow: 5px 7px 7px 0 rgba(0, 0, 0, 0.2);
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.otpLoginButton {
+	height: 40px;
+	width: 150px;
+	border-radius: 300px;
+	background: linear-gradient(63deg, rgba(126,126,0,1) 0%, rgba(245,197,7,1) 100%);
+	border: none;
+	font-size: 20px;
+	font-weight: bold;
+	color: #1F0265;
+	box-shadow: 5px 7px 7px 0 rgba(0, 0, 0, 0.2);
+	margin-top: 20px;
+	cursor: pointer;
+}
+#notMe {
+	font-size: 16px;
+	margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		background-position: -120px -220px;
+    	background-size: 180% 180%;
+    	overflow: hidden;
+    	overflow-x: hidden;
+    	overflow-y: hidden;
+
+	}
+
+	.innerBg {
+		height: 450px;
+    	margin-left: 25px;
+    	width: 300px;
+	}
+
+	.logo {
+	width: 40%;
+	height: 40%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+}	
+

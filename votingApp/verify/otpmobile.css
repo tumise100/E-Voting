@@ -1,0 +1,14 @@
+@media screen and (max-width: 468px) {
+	body {
+		background-image: url("/svg/mobilebg.svg");
+		background-position: 20px 20px;
+		overflow: hidden;
+	}
+
+	.innerBg {
+		height: 400px;
+    	margin-left: 10px;
+    	width: 320px;
+	}
+
+}
