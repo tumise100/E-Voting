@@ -1,35 +1,73 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+    /* dark shades of primary color*/
+	--clr-primary-1: #2A018E;
+	--clr-light-pruple: #F1EEFE;
+    /* grey used for paragraphs */
+    --clr-white: #fff;
+    --clr-black: #222;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	--top-container-shadow: 0 3px 0.5px rgba(0, 0, 0, 0.1);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+  }
+
+
+/*
+=============== 
+Global Styles
+===============
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-	background-image: url("svg/bg.svg");
-	background-position: center;
-	background-size: 55%;
-	background-repeat: no-repeat;
+  font-family: var(--ff-secondary);
+  line-height: 1.5;
+  font-size: 0.875rem;
+  background-image: url("./svg/bg.svg");
+  background-position: cover;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-color: var(--clr-light-pruple);
 }
-
-.logo {
-	width: 20%;
-	height: 20%;
-	margin-top: 20px;
-	margin-left: 20px;
+ul {
+  list-style-type: none;
 }
-
-.innerBg {
-	height: 30.0625rem;
-	width: 22.5rem;
+a {
+  text-decoration: none;
+}
+.main {
+	min-height: 100vh;
+}
+.card{
+	box-shadow: var(--light-shadow);
+	margin-top: 3rem;
 	border-radius: 5px;
-	background: #fff;
-	color: #000;
-	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
-	text-align: center;
-	margin-top: 30px;
-	margin-left: 500px;
-	
+	width: 100%;
 }
 
-.image2 {
-	height: 105px;
-	width: 105px;
-	margin-top: 50px;
-	border-radius: 100px;
+.user-image {
+	height: 35%;
+	width: 35%;
+	border-radius: 50%;
 }
 
 #fullName {
@@ -40,95 +78,76 @@ body {
 
 #matricNo {
 	font-size: 16px;
-	font-weight: 400;
-	margin-top: -15px;
+	font-weight: 600;
+	margin-top: -0.6rem;
 }
 
 #department {
 	font-size: 16px;
 	font-weight: 400;
-	margin-top: -15px;
+	margin-top: -0.6rem;
+	margin-bottom: 2rem;
+	padding-bottom: 2rem;
+}
+.top-container{
+	box-shadow: var(--top-container-shadow);
+	border-bottom-left-radius: 0.2rem;
+	border-bottom-right-radius: 0.2rem;
 }
 
-hr {
-	opacity: 50%;
+/*
+================
+Form Styles
+================
+*/
+
+form{
+	margin: 2.5rem auto 4.5rem auto;
+	width: 75%;
+}
+label{
+	font-size: 0.9rem;
+}
+.form-control{
+    border-radius: 15px;
+	padding: 15px;
+	background-color: var(--clr-white);
+	box-shadow: var(--top-container-shadow);
+}
+.btn-gradient{
+    color: var(--clr-white);
+    font-size: 1.5rem;
+    font-weight: 400;
+    background: linear-gradient(120deg, rgba(245, 198, 7, .9), rgba(128, 127, 0) 70%);
+	border-radius: 30px;
+	padding: 1px;
+    box-shadow: var(--light-shadow);
+    width: 70%;
+    transition: var(--transition);
+}
+.btn-gradient:hover{
+    color: var(--clr-white);
+    background: var(--clr-primary-1);
+    transform: translateY(-10px);
+}
+.complain{
+	margin: 2.5rem auto -1.5rem auto;
 }
 
-#otpText {
-	font-size: 11px;
-}
-#otpPhone {
-	font-size: 14px;
-	margin-top: 30px;
-	color: #707070;
-	opacity: 70%;
-}
 
-.inputOtp {
-	width: 199px;
-	height: 30px;
-	background-color: #fff;
-	border: none;
-	border-radius: 40px;
-	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
-	opacity: 70%;
-
-}
-
-.otpButton {
-	height: 40px;
-	width: 150px;
-	border-radius: 300px;
-	background: linear-gradient(63deg, rgba(126,126,0,1) 0%, rgba(245,197,7,1) 100%);
-	border: none;
-	font-size: 16px;
-	font-weight: bold;
-	color: #1F0265;
-	box-shadow: 5px 7px 7px 0 rgba(0, 0, 0, 0.2);
-	margin-top: 10px;
-	cursor: pointer;
-}
-
-.otpLoginButton {
-	height: 40px;
-	width: 150px;
-	border-radius: 300px;
-	background: linear-gradient(63deg, rgba(126,126,0,1) 0%, rgba(245,197,7,1) 100%);
-	border: none;
-	font-size: 20px;
-	font-weight: bold;
-	color: #1F0265;
-	box-shadow: 5px 7px 7px 0 rgba(0, 0, 0, 0.2);
-	margin-top: 20px;
-	cursor: pointer;
-}
-#notMe {
-	font-size: 16px;
-	margin-top: 1.5rem;
-}
-
-@media screen and (max-width: 768px) {
-	body {
-		background-position: -120px -220px;
-    	background-size: 180% 180%;
-    	overflow: hidden;
-    	overflow-x: hidden;
-    	overflow-y: hidden;
-
+@media screen and (max-width: 400px) {
+	.logo{
+		width: 70%;
 	}
+}
+
+
+@media screen and (min-width: 800px) {
 
 	.innerBg {
 		height: 450px;
     	margin-left: 25px;
     	width: 300px;
 	}
-
-	.logo {
-	width: 40%;
-	height: 40%;
-	margin-top: 20px;
-	margin-left: 20px;
-}
-
 }	
 
