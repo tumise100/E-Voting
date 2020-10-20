@@ -133,7 +133,11 @@ label{
 .complain{
 	margin: 2.5rem auto -1.5rem auto;
 }
-
+/*
+======================
+Media Queries
+======================
+*/
 
 @media screen and (max-width: 400px) {
 	.logo{
