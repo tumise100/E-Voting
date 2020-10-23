@@ -65,6 +65,11 @@ Top Navbar
 .top-navbar{
     box-shadow: var(--light-shadow);
     z-index: 2;
+    height: 100px;
+}
+.logo {
+    width: 15%;
+    height: 15%;
 }
 .nav-header {
     display: flex;
@@ -75,6 +80,8 @@ Top Navbar
 .nav-toggle {
     transition: var(--transition);
     cursor: pointer;
+    margin-right: 30%;
+    position: absolute;
 }
 .nav-toggle:hover {
     background: var(--clr-light-purple);
@@ -195,7 +202,6 @@ side Navbar
     padding-left: 0.5rem;
 }
 
-
 /*
 ==============
 font awesome
@@ -245,14 +251,25 @@ Media Queries
 @media screen and (max-width: 799px){
     .logo{
         width: 150px;
+        margin-left: 50px;
     }
+    .pt-2 {
+        margin-top: 10px;
+        margin-left: -10px;
+    }
+
     .bell-img{
         width: 20px;
+        margin-right: 10px;
     }
     .img{
         height: 30px;
         width: 30px;
         border-radius: 50%;
+    }
+    .dropdown {
+        margin-top: 10px;
+        margin-left: -15px;
     }
     .name{
         display: none;
