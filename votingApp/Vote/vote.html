@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Active votes</title>
+    <title>Vote</title>
 
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
@@ -11,6 +11,11 @@
 
     <!-- custom css -->
     <link rel="stylesheet" href="style.css">
+
+       <!-- embedding fontawesome icons  -->
+    <script src="https://kit.fontawesome.com/e25b852c87.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
 </head>
 <body>
     
@@ -26,7 +31,7 @@
                     <div class="dropdown">
                         <a href="#" class="btn p-2" data-toggle="dropdown" role="button">
                             <img src="./SVG/Image -1.svg" alt="" class="img"/>
-                            <label for="" class="name">Ezeche Lanre</label>
+                            <label for="" class="name">Oluwatomi</label>
                             <img src="./img/arrow-down.png" alt="">
                         </a>
                         <div class="dropdown-menu">
@@ -149,83 +154,89 @@
     <!-- end of sidebar -->
 
     
-    <!--Cards-->
-    <section>
+ <!--Cards-->
+     <section>
         <div class="container-fluid">
             <div class="row">
                 <div class="cards">
                     <a href="#" id="active-link" class="page-header">
-                        <img src="./img/ballot.png" alt=""/>    
-                        Active Elections
+                        <div class="dept-elect">
+                        	<img src="./img/ballot.png" alt=""/> 
+                        	<span>Department Of Computer Science</span>
+                        </div>
+                            <p class="elect-post">Presidential Candidates</p>
+                            
                     </a>
                     <div class="row mt-3 mb-5">
-                        <div class="col-xl-4 col-sm-6 p-2">
-                            <div class="card card-common">
-                                <div class="card-body text-center">
-                                    <div class="">
-                                        <img src="./img/big-grad-cap.png" alt="SUG">
-                                        <h6 class="mt-4 sug">Student union Government</h6>
-                                        <p>General Election</p>
-                                        <strong class="text-primary">17th July 2020</strong>
-                                    </div>
-                                    <button class="btn my-3 card-btn">
-                                        Vote
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-xl-3 col-sm-6 p-2">
                             <div class="card card-common">
                                 <div class="card-body text-center">
-                                    <div class="">
-                                        <img src="./img/university.png" alt="Faculty">
-                                        <h6 class="mt-4 sug">Faculty of science</h6>
-                                        <p>General Election</p>
-                                        <strong class="text-primary">17th July 2020</strong>
-                                    </div>
-                                    <button class="btn my-3 card-btn">
-                                        Vote
+                                   <div class="rounded"><img src="./SVG/profile.jpg" alt="" class="candidate-pic"></div>
+                                   <p id="candidate-name">Babayemi Oladipupo</p>
+                                   <p id="candidate-dept">Computer Science</p>
+                                   <p id="candidate-level">400L</p>
+                                    <button class="btn my-3 manifesto-btn">
+                                        View Manifesto
                                     </button>
+                                    <button class="button" data-cardSelectButton></button>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-xl-3 col-sm-6 p-2">
                             <div class="card card-common">
                                 <div class="card-body text-center">
-                                    <div class="">
-                                        <img src="./img/book.png" alt="Department">
-                                        <h6 class="mt-4 sug">Department of Computer Science</h6>
-                                        <p>General Election</p>
-                                        <strong class="text-primary">17th July 2020</strong>
-                                    </div>
-                                    <button class="btn my-3 card-btn">
-                                        Vote
+                                   <div class="rounded"><img src="./SVG/profile.jpg" alt="" class="candidate-pic"></div>
+                                   <p id="candidate-name">Osijo Emmanuel</p>
+                                   <p id="candidate-dept">Computer Science</p>
+                                   <p id="candidate-level">300L</p>
+                                    <button class="btn my-3 manifesto-btn">
+                                        View Manifesto
                                     </button>
+                                    <button class="button" data-cardSelectButton></button>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-xl-3 col-sm-6 p-2">
                             <div class="card card-common">
                                 <div class="card-body text-center">
-                                    <div class="">
-                                        <img src="./img/law.png" alt="Law">
-                                        <h6 class="mt-4 sug">Faculty of Law</h6>
-                                        <p>General Election</p>
-                                        <strong class="text-primary">17th July 2020</strong>
-                                    </div>
-                                    <button class="btn my-3 card-btn">
-                                        Vote
+                                   <div class="rounded"><img src="./SVG/profile.jpg" alt="" class="candidate-pic"></div>
+                                   <p id="candidate-name">Nuhu Kelvin</p>
+                                   <p id="candidate-dept">Computer Science</p>
+                                   <p id="candidate-level">200L</p>
+                                    <button class="btn my-3 manifesto-btn">
+                                        View Manifesto
                                     </button>
+                                    <button class="button" data-cardSelectButton></button>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-xl-3 col-sm-6 p-2">
+                            <div class="card card-common">
+                                <div class="card-body text-center">
+                                   <div class="rounded"><img src="./SVG/profile.jpg" alt="" class="candidate-pic"></div>
+                                   <p id="candidate-name">Ajayi Ayobami</p>
+                                   <p id="candidate-dept">Computer Science</p>
+                                   <p id="candidate-level">400L</p>
+                                    <button class="btn my-3  manifesto-btn">
+                                        View Manifesto
+                                    </button>
+                                    <button class="button" data-cardSelectButton></button>
+                                </div>
+                            </div>
+                        </div>
+                      
                     </div>
+
+                    <button class="btn my-3 card-btn">Previous</button>
+                    <button class="btn my-3 card-btn">Next</button>
                 </div>
             </div>
         </div>
     </section>
     <!--end of Cards-->
-
 
 
 
