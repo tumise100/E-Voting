@@ -36,6 +36,28 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 body {
   font-family: var(--ff-secondary);
   background: var(--clr-light-purple);
@@ -65,11 +87,6 @@ Top Navbar
 .top-navbar{
     box-shadow: var(--light-shadow);
     z-index: 2;
-    height: 100px;
-}
-.logo {
-    width: 15%;
-    height: 15%;
 }
 .nav-header {
     display: flex;
@@ -80,8 +97,6 @@ Top Navbar
 .nav-toggle {
     transition: var(--transition);
     cursor: pointer;
-    margin-right: 30%;
-    position: absolute;
 }
 .nav-toggle:hover {
     background: var(--clr-light-purple);
@@ -116,10 +131,14 @@ Top Navbar
     letter-spacing: var(--spacing);
 }
 .dropdown-menu{
-    background: rgba(18, 26, 44, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.dropdown-item{
+    color: var(--clr-white);
 }
 .dropdown-item:hover{
-    background-color: var(--clr-light-purple);
+    background-color: var(--clr-white);
+    color: var(--clr-primary-1);
 }
 
 /*
@@ -231,6 +250,54 @@ Cards
     color: var(--clr-primary-1);
     font-weight: bold;
 }
+/*
+=============== 
+Modal
+===============
+*/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 43, 43, 0.8);
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  z-index: -10;
+}
+/* OPEN/CLOSE MODAL */
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+  transition: var(--transition);
+}
+.modal-container {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  width: 90vw;
+  height: 30vh;
+  max-width: var(--fixed-width);
+  text-align: center;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.modalclose-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.modalclose-btn:hover {
+  color: var(--clr-red-light);
+  transform: scale(1.3);
+}
+
 
 /*
 ==============
@@ -241,25 +308,14 @@ Media Queries
 @media screen and (max-width: 799px){
     .logo{
         width: 150px;
-        margin-left: 50px;
     }
-    .pt-2 {
-        margin-top: 10px;
-        margin-left: -10px;
-    }
-
     .bell-img{
         width: 20px;
-        margin-right: 10px;
     }
     .img{
         height: 30px;
         width: 30px;
         border-radius: 50%;
-    }
-    .dropdown {
-        margin-top: 10px;
-        margin-left: -15px;
     }
     .name{
         display: none;

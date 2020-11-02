@@ -1,18 +1,3 @@
-const toggleBtn = document.querySelector('.nav-toggle');
-const sidebar = document.querySelector('.sidebar');
-const closeBtn = document.querySelector('.close-btn');
-
-
-toggleBtn.addEventListener("click", function () {
-    sidebar.classList.toggle('show-sidebar');
-});
-
-closeBtn.addEventListener('click', function () {
-    sidebar.classList.remove('show-sidebar');
-});
-
-
-
 /*
 ===================== modal ===============
 */
@@ -29,4 +14,4 @@ modalBtn.addEventListener('click', function() {
 
 modalcloseBtn.addEventListener('click', function () {
   modalOverlay.classList.remove('open-modal')  
-})
+});

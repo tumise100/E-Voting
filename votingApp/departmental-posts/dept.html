@@ -30,13 +30,13 @@
                     </ul>
                     <div class="dropdown">
                         <a href="#" class="btn p-2" data-toggle="dropdown" role="button">
-                            <img src="./SVG/Image -1.svg" alt="" class="img"/>
+                            <img src="./SVG/Image -1.png" alt="" class="img"/>
                             <label for="" class="name">Oluwatomi</label>
                             <img src="./img/arrow-down.png" alt="">
                         </a>
                         <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item text-white py-2 mt-2">Edit Profile</a>
-                            <a href="#" class="dropdown-item text-white py-2">Logout</a>
+                            <a href="#" class="dropdown-item py-2 mt-2">Edit Profile</a>
+                            <a href="#" class="dropdown-item py-2" id="modal-btn">Logout</a>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
         <!-- links -->
         <ul class="links">
           <li>
-            <a href="#" id="active-link">
+            <a href="#">
                 <img src="./img/ballot.png" alt=""/>    
                 Active Elections
             </a>
@@ -96,7 +96,7 @@
             </div>
           </li>
           <li>
-            <a href="#collapseDepartment" data-toggle="collapse">
+            <a href="#collapseDepartment" data-toggle="collapse" id="active-link">
                 <img src=".//img/bookmark.png" alt=""/> 
                 Departments
                 <img src="./img/arrow-down.png" alt=""/>
@@ -105,7 +105,7 @@
             <div class="collapse" id="collapseDepartment">
                 <ul class="links faculty-links">
                     <li>
-                        <a href="#">Computer Science</a>
+                        <a href="#" id="active-link">Computer Science</a>
                     </li>
                     <li>
                         <a href="#">Law</a>
@@ -293,11 +293,28 @@
     </section>
     <!--end of Cards-->
 
+    <!-- custom modal with css-->
+    <!--
+        ***************** it uses only the id in the verify button ***************
+        ---------- for modal to work, make sure if you're using forms, it submits to this page. ----------
+    -->
+    <div class="modal-overlay">
+        <div class="modal-container">
+            <h3>This is a Modal</h3>
+            <p>Modal content goes here</p>
+            <p>&copy; 2020 Ezeche Lanre Samuel</p>
+            <div class="modalclose-btn">
+                <img src="./close.png" alt="close">
+            </div>
+        </div>
+    </div>
+    <!--end of custom modal with css-->
 
 
+</body>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="app.js"></script>
-</body>
+
 </html>

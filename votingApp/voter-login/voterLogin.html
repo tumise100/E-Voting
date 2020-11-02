@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+    <!-- Content -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-xl-12">
@@ -23,25 +25,64 @@
                         <p>&copy; <span id="date"></span> Devhoods Developer E-voting solution.</p>
                     </div>
                     <div class="col-xl-6 p-2 second-side mt-5 mt-xl-0">
-                        <form action="" class="form container text-center p-4 my-5">
+                        <form action="#" class="form container text-center p-4 my-5">
                             <h1 class="text-white mb-5 voters-header">Voter's Login</h1>
                             <div class="form-group">
                                 <label for="matric" class="d-flex justify-content-left">Verify Matric-No: </label>
                                 <input type="text" class="form-control" placeholder="Enter Matric-No.....">
                             </div>
-                            <button class="btn btn-gradient mt-4">Verify</button>
+                            <button class="btn btn-gradient mt-4" id="modal-btn" data-toggle="modal" data-target="#sign-out">Verify</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- end of content -->
 
+    <!-- custom modal with css-->
+    <!--
+        ***************** it uses only the id in the verify button ***************
+        ---------- for both modals to work, make sure this form submits to this page. ----------
+    -->
+    <div class="modal-overlay">
+        <div class="modal-container">
+            <h3>This is a Modal</h3>
+            <p>Modal content goes here</p>
+            <p>&copy; 2020 Ezeche Lanre Samuel</p>
+            <div class="close-btn">
+                <img src="./close.png" alt="close">
+            </div>
+        </div>
+    </div>
+    <!--end of custom modal with css-->
 
+    <!-- 
+        ========= it uses the data attributes in the verify button =============
+    -->
+    <!--bootstrap modal-->
+    <!-- <div class="modal fade" id="sign-out">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Are you sure?</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    CLick the logout button to logout.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Stay</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!--end of bootstrap modal-->
 
+</body>
     <script src="./app.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-</body>
 </html>

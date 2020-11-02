@@ -36,6 +36,28 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 body {
   font-family: var(--ff-secondary);
   background: var(--clr-light-purple);
@@ -116,10 +138,14 @@ Top Navbar
     letter-spacing: var(--spacing);
 }
 .dropdown-menu{
-    background: rgba(18, 26, 44, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.dropdown-item{
+    color: var(--clr-white);
 }
 .dropdown-item:hover{
-    background-color: var(--clr-light-purple);
+    background-color: var(--clr-white);
+    color: var(--clr-primary-1);
 }
 
 /*
@@ -301,39 +327,27 @@ Cards
   width: 100%;
   padding: 0;
   border: none;
-  
-  
 }
-
-.card .button:after {
-  content: 'Cast Vote';
+.card:hover{
+    background-color: var(--clr-primary-1);
 }
-
-.card .button:hover {
+.button:hover {
   background-color: #2CD889;
+  color: var(--clr-white);
 }
 
-.card-select .button:focus {
-  background-color: #2CD889;
-}
-
-.card.is-selected {
-  border: 1px solid #2CD889;
+#clicked {
   transition: all 0.5s ease;
 }
-
-.card.is-selected .button {
-  background-color: #2CD889;
-  border-radius: 0 0 10px 10px;
-  border: none;
+#clicked1 {
+  transition: all 0.5s ease;
 }
-
-.card.is-selected .button:after {
-  content: 'Voted';
-  border-radius: 0 0 10px 10px;
-  border: none;
+#clicked2 {
+  transition: all 0.5s ease;
 }
-
+#clicked3 {
+  transition: all 0.5s ease;
+}
 .candidate-pic {
 	height: 50%;
 	width: 50%;
@@ -343,7 +357,7 @@ Cards
 #candidate-name {
 	font-size: 18px;
 	color: #646D82;
-	font-weight: 500;
+	font-weight: bold;
 	margin-top: 1.5rem;
 }
 #candidate-dept, #candidate-level {
@@ -372,9 +386,9 @@ Cards
 }
 
 .manifesto-btn:hover {
-    border: 1px solid var(--clr-primary-1);
+    border: 1px solid var(--clr-white);
     background: transparent;
-    color: var(--clr-primary-1);
+    color: var(--clr-white);
     font-weight: bold;
     width: 70%;
 }
@@ -402,6 +416,94 @@ Cards
 	margin-top: -10px;
 	font-size: 1.3rem;
 	font-weight: 700;
+}
+
+
+
+
+.grey{
+	background-color: #D8EAE6;
+	height: 3rem;
+	border-radius: 0 0 10px 10px;
+  	width: 100%;
+  	padding: 0;
+  	border: none;
+}
+.green{
+  	background-color: #008B00;
+	height: 3rem;
+	border-radius: 0 0 10px 10px;
+  	width: 100%;
+  	padding: 0;
+  	border: none;
+  	color: white;
+}
+
+.green {
+  visibility: hidden;
+}
+.green:after {
+  	content:'Voted'; 
+  	visibility: visible;
+  	display: block;
+  	background-color: #008B00;
+  	height: 3rem;
+	border-radius: 0 0 10px 10px;
+  	width: 100%;
+  	color: white;
+  	margin-top: -20px;
+  	padding-top: 10px;
+  	font-size: 16px;
+}
+/*
+===============
+Modal
+===============
+*/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 43, 43, 0.8);
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  z-index: -10;
+}
+/* OPEN/CLOSE MODAL */
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+  transition: var(--transition);
+}
+.modal-container {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  width: 70vw;
+  height: 30vh;
+  max-width: var(--fixed-width);
+  text-align: center;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.modalclose-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+.modalclose-btn:hover {
+  transform: scale(1.3);
+}
+
+.modal-footer {
+	justify-content: right;
+
 }
 
 
