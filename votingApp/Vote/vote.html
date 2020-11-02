@@ -174,7 +174,7 @@
                                    <p id="candidate-name">Babayemi Oladipupo</p>
                                    <p id="candidate-dept">Computer Science</p>
                                    <p id="candidate-level">400L</p>
-                                    <button class="btn my-3 manifesto-btn">
+                                    <button class="btn my-3 manifesto-btn" id="myBtn">
                                         View Manifesto
                                     </button>
                                     <button class="grey" data-text-swap="Voted">Cast Vote</button>
@@ -189,7 +189,7 @@
                                    <p id="candidate-name">Osijo Emmanuel</p>
                                    <p id="candidate-dept">Computer Science</p>
                                    <p id="candidate-level">300L</p>
-                                    <button class="btn my-3 manifesto-btn">
+                                    <button class="btn my-3 manifesto-btn" id="myBtn">
                                         View Manifesto
                                     </button>
                                    <button class="grey">Cast Vote</button>
@@ -204,7 +204,7 @@
                                    <p id="candidate-name">Nuhu Kelvin</p>
                                    <p id="candidate-dept">Computer Science</p>
                                    <p id="candidate-level">200L</p>
-                                    <button class="btn my-3 manifesto-btn">
+                                    <button class="btn my-3 manifesto-btn" id="myBtn">
                                         View Manifesto
                                     </button>
                                     <button class="grey">Cast Vote</button>
@@ -219,7 +219,7 @@
                                    <p id="candidate-name">Ajayi Ayobami</p>
                                    <p id="candidate-dept">Computer Science</p>
                                    <p id="candidate-level">400L</p>
-                                    <button class="btn my-3  manifesto-btn">
+                                    <button class="btn my-3  manifesto-btn" id="myBtn">
                                         View Manifesto
                                     </button>
                                     <button class="grey">Cast Vote</button>
@@ -266,9 +266,29 @@
     </div>
     <!--end of custom modal with css-->
 
-    <!-- 
-        ========= it uses the data attributes in the verify button =============
-    -->
+   
+    <!-- Manifesto Popup -->
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+		<div class="card-body text-center">
+             <div class="rounded pop-sided pop-pic"><img src="./SVG/profile.png" alt="" class="pop-candidate-pic"></div>
+             	<div class="popsided" id="popdetails">
+                <p id="pop-candidate-name">Babayemi Oladipupo</p>
+                <p id="pop-candidate-dept">Computer Science</p>
+                <p id="pop-candidate-level">400L</p>
+                </div>
+                <div class="manifesto-head"><h3>My Manifesto</h3></div>
+                <p class="manifesto-text">What is Lorem Ipsum?
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+				Why do we use it?
+				It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+				 </div>
+</div>
 
 
 
