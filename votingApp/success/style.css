@@ -1,0 +1,706 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+    /* dark shades of primary color*/
+    --clr-primary-1: #2A018E;
+    /* grey used for paragraphs */
+    --clr-white: #fff;
+    --clr-light-purple: #CEC5E5;
+    --clr-black: #222;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+  }
+
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+body {
+  font-family: var(--ff-secondary);
+  background: var(--clr-light-purple);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+p{
+    letter-spacing: var(--spacing);
+}
+
+.main {
+    min-height: 100vh;
+}
+
+/*
+================= 
+Top Navbar 
+=================
+*/
+
+.top-navbar{
+    box-shadow: var(--light-shadow);
+    z-index: 2;
+    height: 100px;
+}
+.logo {
+    width: 15%;
+    height: 15%;
+}
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-toggle {
+    transition: var(--transition);
+    cursor: pointer;
+    margin-right: 30%;
+    position: absolute;
+}
+.nav-toggle:hover {
+    background: var(--clr-light-purple);
+    transition: var(--transition);
+}
+.icon-parent{
+    position: relative;
+}
+
+.icon-bullet::after{
+    content: "14";
+    color: var(--clr-white);
+    position: absolute;
+    top: 7px;
+    left: 33px;
+    height: 20px;
+    width: 20px;
+    background-color: #f44336;
+    border-radius: 50%;
+}
+.bell-img{
+    width: 25px;
+}
+
+.img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.name{
+    font-weight: bold;
+    letter-spacing: var(--spacing);
+}
+.dropdown-menu{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.dropdown-item{
+    color: var(--clr-white);
+}
+.dropdown-item:hover{
+    background-color: var(--clr-white);
+    color: var(--clr-primary-1);
+}
+
+/*
+=================
+side Navbar 
+================= 
+*/
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: auto;
+    background: var(--clr-white);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1rem;
+    box-shadow: var(--dark-shadow);
+    transition: var(--transition);
+    transform: translate(-100%);
+    z-index: 3;
+}
+.show-sidebar {
+    transform: translate(0);  
+}
+#active-link{
+    color: var(--clr-primary-1);
+    font-weight: bold;
+    text-decoration: none;
+}
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+.close-btn {
+    font-size: 1.75rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+.close-btn:hover {
+    border: red 1px solid;
+    transform: rotate(270deg);
+}
+
+.links a {
+    display: block;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 1.2rem 1.5rem;
+    color: var(--clr-grey-5);
+    transition: var(--transition);
+}
+.links a:hover {
+    background: #f0f0f0;
+    color: var(--clr-primary-5);
+    padding-left: 1.75rem;
+}
+.faculty-links{
+    margin-left: 2.5rem;
+}
+.faculty-links a:hover{
+    border-bottom: 2px solid var(--clr-primary-1);
+}
+.social-icons {
+    justify-self: center;
+    display: flex;
+    padding-bottom: 2rem;
+}
+.social-icons a {
+    margin: 0 0.6rem;
+    transition: var(--transition);
+    box-shadow: var(--light-shadow);
+}
+.social-icons a:hover {
+    padding-left: 0.5rem;
+}
+
+/*
+==============
+font awesome
+==============
+*/
+i{
+    font-size: 50px;
+    color: #1fa176;
+}
+  
+
+/*
+==============
+Cards
+==============
+*/
+.cards{
+    width: 75%;
+    margin: 4rem 2.5rem 3rem auto;
+}
+
+/* Card*/
+@-webkit-keyframes card {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes card {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@-webkit-keyframes card-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes card-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+.card {
+	padding: 0;
+	height: 23rem;
+	border-radius: 10px;
+	box-shadow: 2px 2px 20px -10px #333333;
+	display: inline-block;
+  	vertical-align: middle;
+  	-webkit-transform: perspective(1px) translateZ(0);
+  	transform: perspective(1px) translateZ(0);
+}
+.card:hover {
+	-webkit-animation-name: card-float, card;
+ 	 animation-name: card-float, card;
+  	-webkit-animation-duration: .3s, 1.5s;
+  	animation-duration: .3s, 1.5s;
+  	-webkit-animation-delay: 0s, .3s;
+  	animation-delay: 0s, .3s;
+  	-webkit-animation-timing-function: ease-out, ease-in-out;
+  	animation-timing-function: ease-out, ease-in-out;
+  	-webkit-animation-iteration-count: 1, infinite;
+  	animation-iteration-count: 1, infinite;
+  	-webkit-animation-fill-mode: forwards;
+  	animation-fill-mode: forwards;
+  	-webkit-animation-direction: normal, alternate;
+  	animation-direction: normal, alternate;
+}
+
+
+
+.card .button {
+  height: 3rem;
+  background-color: #D8EAE6;
+  border-radius: 0 0 10px 10px;
+  width: 100%;
+  padding: 0;
+  border: none;
+}
+.card:hover{
+    background-color: var(--clr-primary-1);
+}
+.button:hover {
+  background-color: #2CD889;
+  color: var(--clr-white);
+}
+
+#clicked {
+  transition: all 0.5s ease;
+}
+#clicked1 {
+  transition: all 0.5s ease;
+}
+#clicked2 {
+  transition: all 0.5s ease;
+}
+#clicked3 {
+  transition: all 0.5s ease;
+}
+.candidate-pic {
+	height: 50%;
+	width: 50%;
+	border: 12px #F0FAF8 solid;
+	border-radius: 6rem;
+}
+#candidate-name {
+	font-size: 18px;
+	color: #646D82;
+	font-weight: bold;
+	margin-top: 1.5rem;
+}
+#candidate-dept, #candidate-level {
+	font-size: 0.9rem;
+	color: #A6B1C2;
+	margin-top: -15px;
+}
+
+.page-header{
+    font-size: 1.3rem;
+}
+.sug{
+    font-weight: bold;
+    letter-spacing: var(--spacing);
+}
+
+
+.manifesto-btn {
+	background-color: #F5C507;
+	height: 2.5rem;
+	width: 70%;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.manifesto-btn:hover {
+    border: 1px solid var(--clr-white);
+    background: transparent;
+    color: var(--clr-white);
+    font-weight: bold;
+    width: 70%;
+}
+
+.card-btn {
+    background-color: var(--clr-primary-1);
+    color: var(--clr-white);
+    letter-spacing: var(--spacing);
+    width: 10%;
+}
+.card-btn:hover{
+    border: 1px solid var(--clr-primary-1);
+    background: transparent;
+    color: var(--clr-primary-1);
+    font-weight: bold;
+}
+
+.elect-post {
+	font-size: 1.2rem;
+	font-weight: 500;
+	margin-left: 1.6rem;
+	margin-top: 1.5rem;
+}
+.dept-elect {
+	margin-top: -10px;
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+
+
+
+
+.grey{
+	background-color: #D8EAE6;
+	height: 3rem;
+	border-radius: 0 0 10px 10px;
+  	width: 100%;
+  	padding: 0;
+  	border: none;
+}
+.green{
+  	background-color: #008B00;
+	height: 3rem;
+	border-radius: 0 0 10px 10px;
+  	width: 100%;
+  	padding: 0;
+  	border: none;
+  	color: white;
+}
+
+.green {
+  visibility: hidden;
+}
+.green:after {
+  	content:'Voted'; 
+  	visibility: visible;
+  	display: block;
+  	background-color: #008B00;
+  	height: 3rem;
+	border-radius: 0 0 10px 10px;
+  	width: 100%;
+  	color: white;
+  	margin-top: -20px;
+  	padding-top: 10px;
+  	font-size: 16px;
+}
+/*
+===============
+Modal
+===============
+*/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 43, 43, 0.8);
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  z-index: -10;
+}
+/* OPEN/CLOSE MODAL */
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+  transition: var(--transition);
+}
+.modal-container {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  width: 70vw;
+  height: 30vh;
+  max-width: var(--fixed-width);
+  text-align: center;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.modalclose-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+.modalclose-btn:hover {
+  transform: scale(1.3);
+}
+
+.modal-footer {
+	justify-content: right;
+
+}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  justify-content: center;
+  text-align: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  justify-content: right;
+  text-align: right;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pop-candidate-pic {
+	height: 10%;
+	width: 10%;
+	border: 12px #F0FAF8 solid;
+	border-radius: 6rem;
+	margin-left: 5rem;
+}
+#pop-candidate-name {
+	font-size: 20px;
+	color: #333333;
+	font-weight: bold;
+	margin-top: 1.5rem;
+}
+#pop-candidate-dept, #pop-candidate-level {
+	font-size: 1.1rem;
+	color: black;
+	margin-top: -15px;
+}
+
+.pop-sided {
+	display: flex;
+}
+#popdetails {
+	margin-top: -7rem;
+}
+.pop-pic {
+	margin-left: 3rem;
+}
+
+
+/*
+==============
+Media Queries
+==============
+*/
+
+@media screen and (max-width: 799px){
+    .logo{
+        width: 150px;
+        margin-left: 50px;
+    }
+    .pt-2 {
+        margin-top: 10px;
+        margin-left: -10px;
+    }
+
+    .bell-img{
+        width: 20px;
+        margin-right: 10px;
+    }
+    .img{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+    }
+    .dropdown {
+        margin-top: 10px;
+        margin-left: -15px;
+    }
+    .name{
+        display: none;
+    }
+    .icon-bullet::after{
+        left: 30px;
+        height: 20px;
+        width: 20px;
+    }
+    .cards{
+        width: 90%;
+        margin: 9rem auto 3rem auto;
+    }
+    .card {
+    	height: 100%;
+    }
+    .card-btn {
+    	width: 40%;
+    }
+
+    #popdetails {
+		margin-top: 0.1rem;
+	}
+
+	.pop-candidate-pic {
+		height: 70%;
+		width: 70%;
+		border: 12px #F0FAF8 solid;
+		border-radius: 6rem;
+		margin-left: 0.1rem;
+	}
+	#pop-candidate-name {
+		font-size: 1rem;
+	}
+	#pop-candidate-dept, #pop-candidate-level{
+		font-size: 0.9rem;
+	}
+   
+}
+
+@media screen and (min-width: 800px) {
+    .nav-center {
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .nav-header {
+      padding: 0;
+    }
+    .nav-toggle {
+        display: none;
+    }
+    .sidebar{
+        width: 20%;
+        transform: translate(0%);
+        z-index: 0;
+    }
+    .sidebar-header{
+        margin-top: 8rem;
+    }
+    .close-btn{
+        display: none;
+    }
+    .sidebar-logo{
+        display: none;
+    }
+    .cards{
+        margin: 10rem 1.5rem 3rem auto;
+    }
+    .card {
+    	height: 100%;
+    }
+   
+}
+
+@media screen and (min-width: 1200px){
+    .cards{
+        margin-right: 2rem;
+    }
+    .card {
+    	height: 100%;
+    }
+    .manifesto-btn {
+    	width: 100%;
+    }
+    .manifesto-btn:hover {
+    	width: 100%;
+    }
+    #candidate-name {
+	font-size: 14px;
+	}
+}
