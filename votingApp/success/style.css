@@ -109,11 +109,14 @@ Top Navbar
     background: var(--clr-light-purple);
     transition: var(--transition);
 }
+/*
 .icon-parent{
+    display: none;
     position: relative;
 }
 
 .icon-bullet::after{
+    display: none;
     content: "14";
     color: var(--clr-white);
     position: absolute;
@@ -125,8 +128,10 @@ Top Navbar
     border-radius: 50%;
 }
 .bell-img{
+    display: none;
     width: 25px;
 }
+*/
 
 .img{
     height: 40px;

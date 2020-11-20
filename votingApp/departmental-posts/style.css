@@ -323,7 +323,7 @@ Media Queries
 @media screen and (max-width: 799px){
     .logo{
         width: 150px;
-        margin-left: 50px;
+        margin-left: 70px;
     }
     .pt-2 {
         margin-top: 10px;
@@ -340,8 +340,7 @@ Media Queries
         border-radius: 50%;
     }
     .dropdown {
-        margin-top: 10px;
-        margin-left: -15px;
+        margin-left: -20px;
     }
     .name{
         display: none;

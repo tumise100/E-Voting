@@ -308,6 +308,7 @@ Media Queries
 @media screen and (max-width: 799px){
     .logo{
         width: 150px;
+        margin-left: 70px;
     }
     .bell-img{
         width: 20px;
@@ -328,6 +329,12 @@ Media Queries
     .cards{
         width: 90%;
         margin: 9rem auto 3rem auto;
+    }
+    .nav-toggle {
+    transition: var(--transition);
+    cursor: pointer;
+    margin-right: 30%;
+    position: absolute;
     }
 }
 

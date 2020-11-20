@@ -199,7 +199,18 @@ Media Queries
         font-size: 1rem;
     }
     .voters-header{
-        font-size: 3rem;
+        font-size: 1.5rem;
+    }
+    .form-control {
+      width: 150%;
+      height: 5px;
+      margin-left: -50px;
+    }
+    .verifymat {
+      margin-left: -50px;
+    }
+    .btn {
+      font-size: 1rem;
     }
     .second-side{
         background-image: url('./SVG/small\ ring.svg');
