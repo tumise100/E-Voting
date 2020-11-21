@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dept</title>
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css">
+
+       <!-- embedding fontawesome icons  -->
+    <script src="https://kit.fontawesome.com/e25b852c87.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+</head>
+<body>
+    
+    <!-- top Navbar -->
+    <nav>
+        <div class="container-fluid bg-white py-4 top-navbar fixed-top">
+            <div class="nav-header ml-xl-5">
+                <img src="./SVG/logo.svg" alt="Logo" width="250" class="logo"/>
+                <div class="d-flex">
+                    <ul class="pt-2">
+                        <!--
+                        <li class="nav-item icon-parent"><a href="#" class="nav-link icon-bullet" title="Notification"><img src="./img/bell.png" class="bell-img"/></a></li>
+                    </ul> -->
+                    <div class="dropdown">
+                        <a href="#" class="btn p-2" data-toggle="dropdown" role="button">
+                            <img src="./SVG/Image -1.png" alt="" class="img"/>
+                            <label for="" class="name">Oluwatomi</label>
+                            <img src="./img/arrow-down.png" alt="">
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item py-2 mt-2">Edit Profile</a>
+                            <a href="#" class="dropdown-item py-2" id="modal-btn">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="nav-toggle btn">
+                  <img src="./img/menu.png" alt="Logo" class="menu" />
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- end of top Navbar -->
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header mb-1">
+          <img src="./SVG/logo.svg" alt="close" width="150" class="sidebar-logo"/>
+          <button class="close-btn btn">
+            <img src="./img/delete.png" alt="close"/>
+          </button>
+        </div>
+        <!-- links -->
+        <ul class="links">
+          <li>
+            <a href="#">
+                <img src="./img/ballot.png" alt=""/>    
+                Active Elections
+            </a>
+          </li>
+          <li>
+            <a href="#">
+                <img src="./img/grad-cap.png" alt=""/> 
+                Student Union Government
+            </a>
+          </li>
+          <!-- Faculty dropdown menu -->
+          <li>
+            <a href="#collapseFaculty" data-toggle="collapse">
+                <img src="./img/faculty.png" alt=""/>
+                Faculties
+                <img src="./img/arrow-down.png" alt=""/>
+            </a>
+            <!-- Faculties -->
+            <div class="collapse" id="collapseFaculty">
+                <ul class="links faculty-links">
+                    <li>
+                        <a href="#">Science</a>
+                    </li>
+                    <li>
+                        <a href="#">Law</a>
+                    </li>
+                    <li>
+                        <a href="#">Education</a>
+                    </li>
+                    <li>
+                        <a href="#">Administration</a>
+                    </li>
+                </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#collapseDepartment" data-toggle="collapse" id="active-link">
+                <img src=".//img/bookmark.png" alt=""/> 
+                Departments
+                <img src="./img/arrow-down.png" alt=""/>
+            </a>
+            <!-- Departments -->
+            <div class="collapse" id="collapseDepartment">
+                <ul class="links faculty-links">
+                    <li>
+                        <a href="#" id="active-link">Computer Science</a>
+                    </li>
+                    <li>
+                        <a href="#">Law</a>
+                    </li>
+                    <li>
+                        <a href="#">Business Administration</a>
+                    </li>
+                    <li>
+                        <a href="#">Industrial relations</a>
+                    </li>
+                    <li>
+                        <a href="#">History</a>
+                    </li>
+                    <li>
+                        <a href="#">Microbiology</a>
+                    </li>
+                    <li>
+                        <a href="#">Statistics</a>
+                    </li>
+                    <li>
+                        <a href="#">Mathematics</a>
+                    </li>
+                </ul>
+            </div>
+          </li>
+        </ul>
+        <!-- social media -->
+      <ul class="social-icons">
+        <li>
+            <a href="https://www.instagram.com">
+              <img src="./img/instagram.png" alt=""/>
+            </a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com">
+            <img src="./img/twitter.png" alt=""/>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com">
+            <img src="./img/linkedin.png" alt=""/>
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <!-- end of sidebar -->
+
+    
+ <!--Cards-->
+     <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="cards">
+                    <a href="#" id="active-link" class="page-header">
+                        <img src="./img/ballot.png" alt=""/> 
+                            Department Of Computer Science<br><br>
+                            Elective Posts
+                    </a>
+                    <div class="row mt-3 mb-5">
+                        <div class="col-xl-3 col-sm-6 p-2">
+                            <div class="card card-common">
+                                <div class="card-body text-center">
+                                    <div class="">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <h6 class="mt-4 sug">President</h6>
+                                        <p>4 Candidates</p>
+                                       
+                                    </div>
+                                    <button class="btn my-3 card-btn">
+                                        Vote Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 p-2">
+                            <div class="card card-common">
+                                <div class="card-body text-center">
+                                    <div class="">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <h6 class="mt-4 sug">Vice-President</h6>
+                                        <p>3 Candidates</p>
+                                       
+                                    </div>
+                                    <button class="btn my-3 card-btn">
+                                        Vote Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 p-2">
+                            <div class="card card-common">
+                                <div class="card-body text-center">
+                                    <div class="">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <h6 class="mt-4 sug">General Secretary</h6>
+                                        <p>5 Candidates</p>
+                                        
+                                    </div>
+                                    <button class="btn my-3 card-btn">
+                                        Vote Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 p-2">
+                            <div class="card card-common">
+                                <div class="card-body text-center">
+                                    <div class="">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <h6 class="mt-4 sug">Finacial Secretary</h6>
+                                        <p>3 Candidates</p>
+                                        
+                                    </div>
+                                    <button class="btn my-3 card-btn">
+                                        Vote Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 p-2">
+                            <div class="card card-common">
+                                <div class="card-body text-center">
+                                    <div class="">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <h6 class="mt-4 sug">Social Director</h6>
+                                        <p>5 Candidates</p>
+                                        
+                                    </div>
+                                    <button class="btn my-3 card-btn">
+                                        Vote Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 p-2">
+                            <div class="card card-common">
+                                <div class="card-body text-center">
+                                    <div class="">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <h6 class="mt-4 sug">Sport Director</h6>
+                                        <p>4 Candidates</p>
+                                       
+                                    </div>
+                                    <button class="btn my-3 card-btn">
+                                        Vote Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 p-2">
+                            <div class="card card-common">
+                                <div class="card-body text-center">
+                                    <div class="">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <h6 class="mt-4 sug">ICT 1</h6>
+                                        <p>3 Candidates</p>
+                                       
+                                    </div>
+                                    <button class="btn my-3 card-btn">
+                                        Vote Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 p-2">
+                            <div class="card card-common">
+                                <div class="card-body text-center">
+                                    <div class="">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <h6 class="mt-4 sug">ICT 2</h6>
+                                        <p>3 Candidates</p>
+                                       
+                                    </div>
+                                    <button class="btn my-3 card-btn">
+                                        Vote Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end of Cards-->
+
+    <!-- custom modal with css-->
+    <!--
+        ***************** it uses only the id in the verify button ***************
+        ---------- for modal to work, make sure if you're using forms, it submits to this page. ----------
+    -->
+    <div class="modal-overlay">
+        <div class="modal-container">
+            <h3>This is a Modal</h3>
+            <p>Modal content goes here</p>
+            <p>&copy; 2020 Ezeche Lanre Samuel</p>
+            <div class="modalclose-btn">
+                <img src="./close.png" alt="close">
+            </div>
+        </div>
+    </div>
+    <!--end of custom modal with css-->
+
+
+</body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+
+</html>
