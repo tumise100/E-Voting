@@ -329,32 +329,12 @@ Cards
   border: none;
 }
 .card:hover{
-<<<<<<< HEAD
   background-color: lightgreen;
-=======
-    background-color: var(--clr-primary-1);
->>>>>>> 656026766749450e3f847f3fd8febd8a406077d1
 }
 .button:hover {
   background-color: #2CD889;
   color: var(--clr-white);
 }
-<<<<<<< HEAD
-=======
-
-#clicked {
-  transition: all 0.5s ease;
-}
-#clicked1 {
-  transition: all 0.5s ease;
-}
-#clicked2 {
-  transition: all 0.5s ease;
-}
-#clicked3 {
-  transition: all 0.5s ease;
-}
->>>>>>> 656026766749450e3f847f3fd8febd8a406077d1
 .candidate-pic {
 	height: 50%;
 	width: 50%;
@@ -363,11 +343,7 @@ Cards
 }
 #candidate-name {
 	font-size: 18px;
-<<<<<<< HEAD
 	color: #000;
-=======
-	color: #646D82;
->>>>>>> 656026766749450e3f847f3fd8febd8a406077d1
 	font-weight: bold;
 	margin-top: 1.5rem;
 }
@@ -405,7 +381,6 @@ Cards
 }
 
 .card-btn {
-<<<<<<< HEAD
   background-color: var(--clr-white);
   color: var(--clr-primary-1);
   letter-spacing: var(--spacing);
@@ -414,18 +389,6 @@ Cards
 .card-btn:hover{
   border: 1px solid var(--clr-white);
   background: transparent;
-=======
-    background-color: var(--clr-primary-1);
-    color: var(--clr-white);
-    letter-spacing: var(--spacing);
-    width: 10%;
-}
-.card-btn:hover{
-    border: 1px solid var(--clr-primary-1);
-    background: transparent;
-    color: var(--clr-primary-1);
-    font-weight: bold;
->>>>>>> 656026766749450e3f847f3fd8febd8a406077d1
 }
 
 .elect-post {
@@ -439,13 +402,6 @@ Cards
 	font-size: 1.3rem;
 	font-weight: 700;
 }
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 656026766749450e3f847f3fd8febd8a406077d1
 .grey{
 	background-color: #D8EAE6;
 	height: 3rem;
@@ -455,26 +411,15 @@ Cards
   	border: none;
 }
 .green{
-<<<<<<< HEAD
   width: 100%;
   padding: 0;
   border: none;
-=======
-  	background-color: #008B00;
-	height: 3rem;
-	border-radius: 0 0 10px 10px;
-  	width: 100%;
-  	padding: 0;
-  	border: none;
-  	color: white;
->>>>>>> 656026766749450e3f847f3fd8febd8a406077d1
 }
 
 .green {
   visibility: hidden;
 }
 .green:after {
-<<<<<<< HEAD
   content:'Voted'; 
   visibility: visible;
   display: block;
@@ -486,19 +431,6 @@ Cards
   margin-top: -20px;
   padding-top: 10px;
   font-size: 16px;
-=======
-  	content:'Voted'; 
-  	visibility: visible;
-  	display: block;
-  	background-color: #008B00;
-  	height: 3rem;
-	border-radius: 0 0 10px 10px;
-  	width: 100%;
-  	color: white;
-  	margin-top: -20px;
-  	padding-top: 10px;
-  	font-size: 16px;
->>>>>>> 656026766749450e3f847f3fd8febd8a406077d1
 }
 /*
 ===============
